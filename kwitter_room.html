@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Kwitter Room</title>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+		</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+		</script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="container">
+		<button id="logout" class="btn btn-danger" onclick="logout()">
+			<span class="material-icons">
+				logout
+			</span>
+			Logout
+		</button>
+		<center>
+			<h1 class="header">
+				Kwitter
+				<sup>
+					<img src="m2.png">
+				</sup>
+			</h1>
+			<h3 class="color_white" id="user_name"></h3>
+			<div class="form-group input_div_room_page">
+				<label>#Add Room:</label>
+				<input type="text" class="form-control" style="width: 50%;" placeholder="Room name" id="txtRoom_name">
+			</div>
+			<button class="btn btn-success mb-2" onclick="addRoom()">#Add Room</button>
+			<h3 class="color_white">#TRENDINGROOMS</h3>
+			<br>
+			<div id="output"></div>
+
+		</center>
+	</div>
+	<script src="kwitter_room.js"></script>
+</body>
+
+</html>
